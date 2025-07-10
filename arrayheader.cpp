@@ -2,6 +2,18 @@
 #define ARRAYHEADER_H
 #include <iostream>
 
+inline int selection(int size,int ar[size],int element,int choice){
+    if(choice==1){
+        return linear_search(size,ar,element);
+    }
+    else if(choice==2){
+        return binary_search(size,ar,element)
+    }
+    else{
+        return -2;
+    }
+}
+
 inline int linear_search(int size,int ar[size],int element){
     bool flag = false;
     int i;

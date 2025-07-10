@@ -12,7 +12,7 @@ Return values :
 
 Example implementation :
 
-int index = selection(size, arr, element, choice);
+    int index = selection(size, arr, element, choice);
 
     if(index != -1 && index != -2) {
         std::cout << "Element " << element << " found at index: " << index << "\n";

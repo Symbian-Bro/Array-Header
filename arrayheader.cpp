@@ -1,6 +1,23 @@
-#include<iostream>
-using namespace std;
-int main(){
+void linear_search(){
+    bool flag = false;
+    for(int i=o;i<size;i++){
+        if(ar[i]==element){
+            flag=true;
+            break;
+        }
+        else{
+            break;
+        }
+    }
+    if(flag){
+        cout<<"The element has been found at the position "<<i<<"."<<endl;
+    }
+    else{
+        cout<<"The elment is not present in the array."
+    }
+}
+
+void binary_search(){
  int middle,low,high,element,i,size;
  cout<<"Enter the size of the array : ";
  cin>>size;

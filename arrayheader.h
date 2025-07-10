@@ -2,7 +2,7 @@
 #define ARRAYHEADER_H
 #include <iostream>
 
-inline void selection_sort(int size,int ar[size]){
+inline void selection_sort(int size,int* ar){
     for(int i=0;i<(size-1);i++){
         for(int j=i+1;j<size;j++){
             if(ar[j]<ar[i]){
@@ -14,7 +14,7 @@ inline void selection_sort(int size,int ar[size]){
     }
 }
 
-inline int linear_search(int size,int ar[size],int element){
+inline int linear_search(int size,int* ar,int element){
     bool flag = false;
     int i;
     for(i=0;i<size;i++){
@@ -31,7 +31,7 @@ inline int linear_search(int size,int ar[size],int element){
     }
 }
 
-inline int binary_search(int size,int ar[size],int element){
+inline int binary_search(int size,int* ar,int element){
  int middle,low,high,i;
  low=0,high=(size-1);
  bool flag=false;
@@ -56,7 +56,7 @@ inline int binary_search(int size,int ar[size],int element){
  }
 }
 
-inline int selection(int size,int ar[size],int element,int choice){
+inline int selection(int size,int* ar,int element,int choice){
     if(choice==1){
         return linear_search(size,ar,element);
     }

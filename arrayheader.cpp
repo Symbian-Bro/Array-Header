@@ -1,32 +1,26 @@
-void linear_search(){
+#ifndef ARRAYHEADER_H
+#define ARRAYHEADER_H
+#include <iostream>
+
+inline int linear_search(int size,int ar[size],int element){
     bool flag = false;
-    for(int i=o;i<size;i++){
+    int i;
+    for(i=0;i<size;i++){
         if(ar[i]==element){
-            flag=true;
-            break;
-        }
-        else{
+            flag = true;
             break;
         }
     }
     if(flag){
-        cout<<"The element has been found at the position "<<i<<"."<<endl;
+        return i;
     }
     else{
-        cout<<"The elment is not present in the array."
+        return -1;
     }
 }
 
-void binary_search(){
- int middle,low,high,element,i,size;
- cout<<"Enter the size of the array : ";
- cin>>size;
- int ar[size];
- for(i=0;i<size;i++){
-  cin>>ar[i];
- } 
- cout<<"Enter the element you want to search : ";
- cin>>element;
+inline int binary_search(int size,int ar[size],int element){
+ int middle,low,high,i;
  low=0,high=(size-1);
  bool flag=false;
  while(low<=high){
@@ -43,10 +37,10 @@ void binary_search(){
   }
  }
  if(flag){
-  cout<<"The number has been found at the position "<<middle<<endl;
+  return middle;
  }
  else{
-  cout<<"The number is not present in the array :)"<<endl;
+  return -1;
  }
-return 0;
-}
+
+ #endif 

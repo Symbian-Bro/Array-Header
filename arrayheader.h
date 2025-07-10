@@ -57,15 +57,15 @@ inline int binary_search(int size,int ar[size],int element){
 }
 
 inline int selection(int size,int ar[size],int element,int choice){
-    selection_sort(size,ar);
     if(choice==1){
         return linear_search(size,ar,element);
     }
     else if(choice==2){
+        selection_sort(size,ar);
         return binary_search(size,ar,element);
     }
     else{
         return -2;
     }
 }
-#endif 
+#endif

@@ -4,11 +4,11 @@
 
 inline void selection_sort(int size,int ar[size]){
     for(int i=0;i<(size-1);i++){
-        for(j=i+1;j<size;j++){
-            if(array[j]<array[i]){
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+        for(int j=i+1;j<size;j++){
+            if(ar[j]<ar[i]){
+                int temp = ar[i];
+                ar[i] = ar[j];
+                ar[j] = temp;
             }
         }
     }

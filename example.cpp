@@ -16,7 +16,14 @@ int main() {
 
     int result = selection(size, arr, element, choice);
 
-    std::cout << "Result: " << result << std::endl;
-
+    if(result==-1){
+     std::cout<<"The element is not present in the array";
+    }
+    else if(result==-2){
+     std::cout<<"Invalid selection of searching mechanism";
+    } 
+    else{
+     std::cout<<"The element is at the "<<result<<" index of the array";
+    } 
     return 0;
 }

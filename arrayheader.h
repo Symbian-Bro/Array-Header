@@ -55,7 +55,7 @@ inline int binary_search(int size,int* ar,int element){
   return -1;
  }
 }
-
+//function to be called
 inline int selection(int size,int* ar,int element,int choice){
     if(choice==1){
         return linear_search(size,ar,element);

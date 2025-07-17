@@ -12,8 +12,8 @@ int main() {
     std::cout<<"Enter the element : ";
     std::cin>>element;
 
-    choice = 2; // 1 = linear search, 2 = binary search
-
+    std::cout<<"Choose your preferred searching algorithm :\n1.Linear Search\n2.Binary Search\nYour Choice : ";
+    std::cin>>choice;
     int result = selection(size, arr, element, choice);
 
     if(result==-1){

@@ -15,7 +15,7 @@ int main() {
     std::cout<<"Choose your preferred searching algorithm :\n1.Linear Search\n2.Binary Search\nYour Choice : ";
     std::cin>>choice;
     int result = selection(size, arr, element, choice);
-
+//calling a function from the header
     if(result==-1){
      std::cout<<"The element is not present in the array";
     }

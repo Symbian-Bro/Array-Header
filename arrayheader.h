@@ -12,9 +12,7 @@ inline void selection_sort(int size, int* ar) {
             }
         }
         if (min_idx != i) {
-            int temp = ar[i];
-            ar[i] = ar[min_idx];
-            ar[min_idx] = temp;
+            std::swap(ar[i], ar[min_idx]);
         }
     }
 }

@@ -1,6 +1,7 @@
 #ifndef ARRAYHEADER_H
 #define ARRAYHEADER_H
 #include <iostream>
+#include <algorithm>
 
 inline void selection_sort(int size, int* ar) {
     for (int i = 0; i < size - 1; ++i) {

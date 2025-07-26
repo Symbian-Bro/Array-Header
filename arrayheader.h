@@ -2,17 +2,22 @@
 #define ARRAYHEADER_H
 #include <iostream>
 
-inline void selection_sort(int size,int* ar){
-    for(int i=0;i<(size-1);i++){
-        for(int j=i+1;j<size;j++){
-            if(ar[j]<ar[i]){
-                int temp = ar[i];
-                ar[i] = ar[j];
-                ar[j] = temp;
+inline void selection_sort(int size, int* ar) {
+    for (int i = 0; i < size - 1; ++i) {
+        int min_idx = i;
+        for (int j = i + 1; j < size; ++j) {
+            if (ar[j] < ar[min_idx]) {
+                min_idx = j;
             }
+        }
+        if (min_idx != i) {
+            int temp = ar[i];
+            ar[i] = ar[min_idx];
+            ar[min_idx] = temp;
         }
     }
 }
+
 
 inline int linear_search(int size,int* ar,int element){
     bool flag = false;
